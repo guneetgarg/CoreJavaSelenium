@@ -31,14 +31,13 @@ public class CustomTestGenerate {
 		XmlTest test = new XmlTest(suite);
 		test.setName("TmpTest");
 		List<XmlClass> classes = new ArrayList<XmlClass>();
-		classes.add(new XmlClass("com.script1.TestCase1"));
+		classes.add(new XmlClass("com.dummy.Simple"));
 		test.setXmlClasses(classes);
 
 		XmlTest test1 = new XmlTest(suite);
 		test1.setName("test set 2");
 		List<XmlClass> classes1 = new ArrayList<XmlClass>();
-		classes1.add(new XmlClass("com.script1.TestCase2"));
-		classes1.add(new XmlClass("com.script2.TestCase4"));
+		classes1.add(new XmlClass("com.dummy.Simple"));
 
 		test1.setXmlClasses(classes1);
 
@@ -47,9 +46,9 @@ public class CustomTestGenerate {
 		TestNG tng = new TestNG();
 		tng.setXmlSuites(suites);
 		
-//		List<Class<? extends ITestNGListener>> clssListener = new ArrayList<>();
-//		clssListener.add(CustomReporter2.class);
-//		tng.setListenerClasses(clssListener);
+		List<Class<? extends ITestNGListener>> clssListener = new ArrayList<Class<? extends ITestNGListener>>();
+		clssListener.add(ListenerTest.class);
+		tng.setListenerClasses(clssListener);
 		
 		tng.run();
 	}
