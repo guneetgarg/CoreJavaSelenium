@@ -1,4 +1,4 @@
-package com.dummy;
+package com.runtime.testnggenerate;
 
 class Simple1 {
 }

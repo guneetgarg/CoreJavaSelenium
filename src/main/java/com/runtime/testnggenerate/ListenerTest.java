@@ -1,4 +1,4 @@
-package com.dummy;
+package com.runtime.testnggenerate;
 
 import org.testng.ITestContext;
 import org.testng.ITestListener;

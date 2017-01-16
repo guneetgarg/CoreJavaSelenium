@@ -1,4 +1,4 @@
-package com.dummy;
+package com.runtime.testnggenerate;
 
 import org.testng.Assert;
 import org.testng.SkipException;

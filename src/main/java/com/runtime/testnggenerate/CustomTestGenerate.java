@@ -1,4 +1,4 @@
-package com.dummy;
+package com.runtime.testnggenerate;
 
 import java.util.ArrayList;
 import java.util.HashMap;
