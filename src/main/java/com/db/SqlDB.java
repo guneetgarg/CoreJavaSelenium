@@ -30,12 +30,12 @@ public class SqlDB {
 
 		callableStatement.executeUpdate();
 
-		ResultSet userName = (ResultSet) callableStatement.getObject(1);
+		ResultSet resultSet= (ResultSet) callableStatement.getObject(1);
 
-		while (userName.next()) {
+		while (resultSet.next()) {
 			System.out.println(" ");
-			for (int i = 1; i < userName.getFetchSize(); i++) {
-				System.out.print(userName.getMetaData().getColumnLabel(i) + "->" + userName.getString(i));
+			for (int i = 1; i < resultSet.getFetchSize(); i++) {
+				System.out.print(resultSet.getMetaData().getColumnLabel(i) + "->" + resultSet.getString(i));
 			}
 		}
 
