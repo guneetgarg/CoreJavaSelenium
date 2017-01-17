@@ -4,6 +4,7 @@ import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 
 import oracle.jdbc.OracleTypes;
@@ -30,15 +31,17 @@ public class SqlDB {
 
 		callableStatement.executeUpdate();
 
-		ResultSet resultSet= (ResultSet) callableStatement.getObject(1);
+		ResultSet resultSet = (ResultSet) callableStatement.getObject(1);
+		ResultSetMetaData metaData = resultSet.getMetaData();
 
 		while (resultSet.next()) {
 			System.out.println(" ");
-			for (int i = 1; i < resultSet.getFetchSize(); i++) {
+			for (int i = 1; i < metaData.getColumnCount(); i++) {
 				System.out.print(resultSet.getMetaData().getColumnLabel(i) + "->" + resultSet.getString(i));
+			//	System.out.println(resultSet.getMetaData().getColumnLabel(i));
 			}
+//			break;
 		}
-
 	}
 
 	private static Connection getDBConnection() {
