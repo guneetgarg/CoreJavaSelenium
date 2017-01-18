@@ -2,10 +2,31 @@ package com.collectionFrame;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class ListToArray {
 	public static void main(String[] args) {
+		
+		//String array
+		String[] words = {"ace", "boom", "crew", "dog", "eon"};
+		//Use Arrays utility class
+		List<String> wordList = Arrays.asList(words);
+		//Now you can iterate over the list
+		System.out.println(wordList);
+		
+		
+		//String array
+		Integer[] nums = {1,2,3,4};
+		//Use Arrays utility class
+		List<Integer> numsList = Arrays.asList(nums);
+		System.out.println(numsList);
+		Collections.reverse(numsList);
+		System.out.println(numsList);
+		
+		
+		
+		
 		List<String> lst = new ArrayList<String>();
 		lst.add("alpha");
 		lst.add("beta");
