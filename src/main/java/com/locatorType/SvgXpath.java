@@ -15,7 +15,9 @@ public class SvgXpath {
 	private void dmo() {
 		System.setProperty("webdriver.chrome.driver", "Drivers_executable/chromedriver.exe");
 		driver = browserStart();
-		System.out.println(driver.findElement(By.xpath("//*[name()='svg']")).getAttribute("width"));
+		System.out.println(driver.findElement(By.xpath("//*[name()='svg']/*[name()='rect']")).getAttribute("x"));
+		//System.out.println(driver.findElement(By.s));
+		
 		driver.close();
 	}
 
