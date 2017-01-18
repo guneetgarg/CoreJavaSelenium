@@ -2,6 +2,8 @@ package com.collectionFrame;
 
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 public class MapHashMap {
@@ -38,5 +40,14 @@ public class MapHashMap {
 
 		// Removing an element from the map
 		System.out.println("Value removed from the map : " + map.remove("Kartik"));
+
+		// traversing Map using entrySet() method
+		Set<Entry<String, Double>> entries = map.entrySet();
+		for (Entry<String, Double> entry : entries) {
+			String key = entry.getKey();
+			Double value = entry.getValue();
+			System.out.println(key + "  " + value);
+		}
+
 	}
 }
