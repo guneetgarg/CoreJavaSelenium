@@ -42,9 +42,6 @@ public class Keywords {
 	public void pause(String object, String data) throws NumberFormatException, InterruptedException {
 	}
 
-	/************************
-	 * APPLICATION SPECIFIC KEYWORDS
-	 ********************************/
 	public void Ribonverification(String object, String data) {
 
 	}
@@ -59,11 +56,8 @@ public class Keywords {
 		}
 	}
 
-	// not a keyword
-
-	public void captureScreenshot(String filename, String keyword_execution_result){
+	public void captureScreenshot(String filename, String keyword_execution_result) {
 		System.out.println("sreen");
-		// take screen shots
 	}
 
 	public void ASSERALL() {

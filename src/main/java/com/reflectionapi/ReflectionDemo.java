@@ -13,9 +13,11 @@ public class ReflectionDemo {
 			IllegalArgumentException, InvocationTargetException {
 		keywords = new Keywords();
 		method = keywords.getClass().getMethods();
+		System.out.println("****************** Method Name Present in Keyword class ******************");
 		for (Method a : method) {
-			// System.out.println(a);
+			System.out.println(a);
 		}
+		System.out.println("******************************************************************************************************");
 		// System.out.println(method[2]);
 		System.out.println(method.length);
 
