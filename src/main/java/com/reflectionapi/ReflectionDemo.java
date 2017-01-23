@@ -14,17 +14,23 @@ public class ReflectionDemo {
 		keywords = new Keywords();
 		method = keywords.getClass().getMethods();
 		System.out.println("****************** Method Name Present in Keyword class ******************");
+		int i = 1;
 		for (Method a : method) {
-			System.out.println(a);
+			System.out.println(i + "-> " + a);
+			i++;
 		}
-		System.out.println("******************************************************************************************************");
-		// System.out.println(method[2]);
-		System.out.println(method.length);
+		System.out.println("******************************************************************************");
+		System.out.println("Total Number of Method in a class -> " + method.length);
+		System.out.println("******************************************************************************");
 
 		capturescreenShot_method = keywords.getClass().getMethod("captureScreenshot", String.class, String.class);
-		System.out.println(capturescreenShot_method.invoke(keywords, "",""));
+		System.out.println(capturescreenShot_method.invoke(keywords, "", ""));
 		System.out.println(capturescreenShot_method);
+		System.out.println("******************************************************************************");
 
-		method[2].invoke(keywords, "aa", "");
+
+		//accessing method using array..... order of array keep on changing... Method keybord do not preserve order
+		System.out.println(method[1]);
+		method[1].invoke(keywords);
 	}
 }
