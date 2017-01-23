@@ -9,8 +9,6 @@ public class Keywords {
 
 	public void openBrowser(String object, String data) {
 		System.out.println("Drivers path");
-		String path = "";
-
 	}
 
 	public void verifyTitle(String object, String data) {
