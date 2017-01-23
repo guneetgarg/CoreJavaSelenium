@@ -9,8 +9,7 @@ public class ReflectionDemo {
 	public static Method method[];
 	public static Method capturescreenShot_method;
 
-	public static void main(String[] args) throws NoSuchMethodException, SecurityException, IllegalAccessException,
-			IllegalArgumentException, InvocationTargetException {
+	public static void main(String[] args) throws NoSuchMethodException, SecurityException, IllegalAccessException,IllegalArgumentException, InvocationTargetException {
 		keywords = new Keywords();
 		method = keywords.getClass().getMethods();
 		System.out.println("****************** Method Name Present in Keyword class ******************");
@@ -28,8 +27,8 @@ public class ReflectionDemo {
 		System.out.println(capturescreenShot_method);
 		System.out.println("******************************************************************************");
 
-
-		//accessing method using array..... order of array keep on changing... Method keybord do not preserve order
+		// accessing method using array..... order of array keep on changing...
+		// Method keybord do not preserve order
 		System.out.println(method[1]);
 		method[1].invoke(keywords);
 	}

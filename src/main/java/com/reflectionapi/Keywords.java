@@ -9,8 +9,9 @@ public class Keywords {
 		System.out.println("open browser method invoked");
 	}
 
-	public void captureScreenshot(String filename, String keyword_execution_result) {
+	public String captureScreenshot(String filename, String keyword_execution_result) {
 		System.out.println("sreen");
+		return "returning String from captureScreenshot method :: :)";
 	}
 
 	public void ASSERALL() {
