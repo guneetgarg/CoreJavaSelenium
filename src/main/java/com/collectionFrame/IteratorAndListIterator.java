@@ -13,7 +13,7 @@ public class IteratorAndListIterator {
 		list.add("THIRD");
 
 		// Traversing list elements in forward direction using Iterator
-		Iterator iterator = list.iterator();
+		Iterator<String> iterator = list.iterator();
 		while (iterator.hasNext()) {
 			System.out.println(iterator.next());
 		}
@@ -24,7 +24,7 @@ public class IteratorAndListIterator {
 		System.out.println();
 
 		// Traversing list elements in forward direction using ListIterator
-		ListIterator listIterator = list.listIterator();
+		ListIterator<String> listIterator = list.listIterator();
 		while (listIterator.hasNext()) {
 			System.out.println(listIterator.nextIndex() + " : " + listIterator.next());
 		}
