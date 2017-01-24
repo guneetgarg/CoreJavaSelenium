@@ -9,6 +9,9 @@ import java.sql.SQLException;
 
 import oracle.jdbc.OracleTypes;
 
+/*
+ * DB connection to call store procedure
+ */
 public class SqlDB {
 	CallableStatement callableStatement = null;
 
