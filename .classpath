@@ -12,6 +12,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="src/main/corejava"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
@@ -22,6 +23,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/ggarg1/Downloads/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="Lib/ojdbc14.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
