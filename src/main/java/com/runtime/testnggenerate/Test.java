@@ -10,7 +10,7 @@ class Test {
 		Test t = new Test();
 		t.printName(s);
 
-		Class c2 = Test.class;
+		Class<Test> c2 = Test.class;
 		System.out.println(c2.getName());
 	}
 

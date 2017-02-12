@@ -9,6 +9,9 @@ import java.sql.SQLException;
 
 import oracle.jdbc.OracleTypes;
 
+/*
+ * DB connection to call store procedure
+ */
 public class SqlDB {
 	CallableStatement callableStatement = null;
 
@@ -38,9 +41,9 @@ public class SqlDB {
 			System.out.println(" ");
 			for (int i = 1; i < metaData.getColumnCount(); i++) {
 				System.out.print(resultSet.getMetaData().getColumnLabel(i) + "->" + resultSet.getString(i));
-			//	System.out.println(resultSet.getMetaData().getColumnLabel(i));
+				// System.out.println(resultSet.getMetaData().getColumnLabel(i));
 			}
-//			break;
+			// break;
 		}
 	}
 
