@@ -1,4 +1,4 @@
-package com.exception_handling;
+package com.HandlingExceptions;
 
 //The Java throw keyword is used to explicitly throw an exception.
 

@@ -1,6 +1,6 @@
-package com.exception_handling;
+package com.HandlingExceptions;
 
-public class TryCatchClass {
+public class WithoutCatch {
 
 	public static void main(String[] args) {
 		try {

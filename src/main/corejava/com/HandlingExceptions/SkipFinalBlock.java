@@ -1,4 +1,4 @@
-package com.exception_handling;
+package com.HandlingExceptions;
 
 public class SkipFinalBlock {
 	public static void main(String[] args) {
