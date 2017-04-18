@@ -7,7 +7,7 @@ public class CheckHttpStatus {
 	public static void main(String args[]) {
 		boolean flag = true;
 		try {
-			URL url = new URL("http://192.168.73.10:3292/axis/services/AsrResponseReceiverSEI");
+			URL url = new URL("http://10.61.4.149:56989/axis/services/IxcOrderSvcPort" + "?wsdl");
 			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 			connection.setRequestMethod("GET");
 			connection.connect();
@@ -17,7 +17,9 @@ public class CheckHttpStatus {
 			System.out.println("Response code of the object is " + code);
 			if (code == 200) {
 				System.out.println("OK");
-			}
+				System.out.println(connection.getContentType());
+			} else
+				flag = false;
 		} catch (Exception e) {
 			flag = false;
 		}

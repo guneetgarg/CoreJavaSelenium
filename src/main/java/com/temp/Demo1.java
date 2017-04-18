@@ -1,18 +1,38 @@
 package com.temp;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
+import java.io.File;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 public class Demo1 {
 	public static void main(String[] args) {
-		String due_dt;
-		DateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy");
-		Calendar c = Calendar.getInstance();
-		c.setTime(new Date());
-		c.add(Calendar.DATE, 7);
-		due_dt = dateFormat.format(c.getTime());
-		System.out.println(due_dt);
+		int count = 1;
+		try {
+
+			File fXmlFile = new File("query/QueryLsrSendOrder.xml");
+			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+			Document doc = dBuilder.parse(fXmlFile);
+			doc.getDocumentElement().normalize();
+			NodeList nList = doc.getElementsByTagName("TEST_CASE");
+			for (int temp = 0; temp < nList.getLength(); temp++) {
+				Node nNode = nList.item(temp);
+				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+					Element eElement = (Element) nNode;
+					System.out.println(eElement.getAttribute("name"));
+					count++;
+
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
+
 }
