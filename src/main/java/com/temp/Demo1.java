@@ -12,9 +12,7 @@ import org.w3c.dom.NodeList;
 
 public class Demo1 {
 	public static void main(String[] args) {
-		int count = 1;
 		try {
-
 			File fXmlFile = new File("query/QueryLsrSendOrder.xml");
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -26,13 +24,10 @@ public class Demo1 {
 				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 					Element eElement = (Element) nNode;
 					System.out.println(eElement.getAttribute("name"));
-					count++;
-
-				}
+				}System.gc(); 
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-
 }
