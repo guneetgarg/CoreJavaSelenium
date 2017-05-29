@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<asr_order_response>
+	<ack>
+		<ACK_Form>
+			<ack_adminsection>
+				<CCNA value="" />
+				<REQTYP value="SA" />
+				<PON value="123456" />
+				<VER value="000000000000000000000" />
+			</ack_adminsection>
+		</ACK_Form>
+	</ack>
+</asr_order_response>
